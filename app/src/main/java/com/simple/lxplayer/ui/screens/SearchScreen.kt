@@ -13,6 +13,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -148,18 +149,20 @@ fun SongItem(
         verticalAlignment = Alignment.CenterVertically
     ) {
         // 专辑封面
-        AsyncImage(
-            model = song.cover,
-            contentDescription = "专辑封面",
-            modifier = Modifier.size(56.dp),
-            placeholder = {
-                androidx.compose.material3.Icon(
-                    Icons.Default.MusicNote,
-                    contentDescription = null,
-                    modifier = Modifier.size(32.dp)
-                )
-            }
-        )
+        if (song.cover != null) {
+            AsyncImage(
+                model = song.cover,
+                contentDescription = "专辑封面",
+                modifier = Modifier.size(56.dp)
+            )
+        } else {
+            Icon(
+                Icons.Default.MusicNote,
+                contentDescription = "专辑封面",
+                modifier = Modifier.size(56.dp),
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
 
         // 歌曲信息
         Column(

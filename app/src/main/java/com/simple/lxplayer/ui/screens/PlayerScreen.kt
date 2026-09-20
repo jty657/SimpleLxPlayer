@@ -89,19 +89,20 @@ fun PlayerScreen(
             val song = currentSong!!
             
             // 专辑封面
-            AsyncImage(
-                model = song.cover,
-                contentDescription = "专辑封面",
-                modifier = Modifier.size(256.dp),
-                placeholder = {
-                    Icon(
-                        Icons.Default.MusicNote,
-                        contentDescription = null,
-                        modifier = Modifier.size(128.dp),
-                        tint = MaterialTheme.colorScheme.primary
-                    )
-                }
-            )
+            if (song.cover != null) {
+                AsyncImage(
+                    model = song.cover,
+                    contentDescription = "专辑封面",
+                    modifier = Modifier.size(256.dp)
+                )
+            } else {
+                Icon(
+                    Icons.Default.MusicNote,
+                    contentDescription = "专辑封面",
+                    modifier = Modifier.size(256.dp),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
 
             // 歌曲信息
             Column(
