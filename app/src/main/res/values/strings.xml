@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">简易LX播放器</string>
+    <string name="search">搜索</string>
+    <string name="player">播放</string>
+    <string name="me">我的</string>
+    <string name="import_js">导入音源JS文件</string>
+    <string name="import_success">导入成功</string>
+    <string name="import_failed">导入失败，请检查文件格式</string>
+    <string name="no_js_imported">未导入音源文件</string>
+    <string name="search_hint">搜索歌曲、歌手</string>
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
+    <string name="next">下一首</string>
+    <string name="previous">上一首</string>
+    <string name="quality">音质</string>
+</resources>

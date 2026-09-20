@@ -1,0 +1,27 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(cd)",
+            "Bash(curl)",
+            "Bash(1)",
+            "Bash(head)",
+            "Bash(echo)",
+            "Bash(ls)",
+            "writeFile",
+            "terminal(cd)",
+            "terminal(chmod)",
+            "terminal(export)",
+            "terminal(./gradlew)",
+            "terminal(1)",
+            "terminal",
+            "editFile",
+            "Bash(chmod)",
+            "Bash(mkdir)",
+            "Bash(./gradlew)",
+            "Bash(wget)",
+            "Bash(unzip)",
+            "Bash(rm gradle-8.10.2-bin.zip)"
+        ],
+        "deny": []
+    }
+}
